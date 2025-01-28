@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tbot",
+  "version": "${version}",
+  "name": "TBot",
+  "description": "This is a open source triggerbot, for the source code visit the gitub page",
+  "authors": ["NotNightSky"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/tbot/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.nightsky.tbot.client.TbotClient"
+    ],
+    "main": [
+      "me.nightsky.tbot.Tbot"
+    ]
+  },
+  "mixins": [
+    "tbot.mixins.json",
+    {
+      "config": "tbot.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
